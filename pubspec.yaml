@@ -12,7 +12,6 @@ dependencies:
   video_player: ^2.5.1
   cached_network_image: ^3.2.3
   visibility_detector: ^0.3.3
-  simple_animations: ^5.0.0+3
   flutter: 
     sdk: flutter
 
