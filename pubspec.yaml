@@ -1,0 +1,25 @@
+name: slide_animation
+version: 1.0.0+1
+publish_to: none
+description: Aisthetic technical challenge
+environment: 
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  dio: ^4.0.6
+  video_player: ^2.5.1
+  cached_network_image: ^3.2.3
+  visibility_detector: ^0.3.3
+  simple_animations: ^5.0.0+3
+  flutter: 
+    sdk: flutter
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
