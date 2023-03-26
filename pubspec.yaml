@@ -1,7 +1,7 @@
 name: slide_animation
 version: 1.0.0+1
 publish_to: none
-description: Aisthetic technical challenge
+description: Image & Video sliding with animated text
 environment: 
   sdk: '>=2.18.2 <3.0.0'
 

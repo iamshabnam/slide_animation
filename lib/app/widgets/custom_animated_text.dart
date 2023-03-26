@@ -11,8 +11,9 @@ class CustomAnimatedText extends StatefulWidget {
 
 class _CustomAnimatedTextState extends State<CustomAnimatedText> with SingleTickerProviderStateMixin {
   late AnimationController controller;
-  double paddingBottom = 0;
+  double paddingTop = 0;
   double opacity = 1;
+  late String showText;
 
   @override
   void initState() {
@@ -22,18 +23,18 @@ class _CustomAnimatedTextState extends State<CustomAnimatedText> with SingleTick
       // debugPrint(controller.value.toString());
       setState(() {
         opacity = 1 * controller.value;
-        paddingBottom = (1 - controller.value) * 16;
+        paddingTop = (1 - controller.value) * 16;
       });
     });
     // debugPrint('initState called');
     super.initState();
   }
 
-  @override
-  void didChangeDependencies() async {
-    // debugPrint('didChangeDependencies called');
-    super.didChangeDependencies();
-  }
+  // @override
+  // void didChangeDependencies() async {
+  //   // debugPrint('didChangeDependencies called');
+  //   super.didChangeDependencies();
+  // }
 
   @override
   void didUpdateWidget(covariant CustomAnimatedText oldWidget) {
@@ -57,8 +58,6 @@ class _CustomAnimatedTextState extends State<CustomAnimatedText> with SingleTick
     await appear(newText);
   }
 
-  late String showText;
-
   @override
   Widget build(BuildContext context) {
     return Opacity(
@@ -66,7 +65,7 @@ class _CustomAnimatedTextState extends State<CustomAnimatedText> with SingleTick
       child: SizedBox(
         height: 50,
         child: Padding(
-          padding: EdgeInsets.only(top: paddingBottom),
+          padding: EdgeInsets.only(top: paddingTop),
           child: Text(showText, textScaleFactor: 1.5, textAlign: TextAlign.start),
         ),
       ),
